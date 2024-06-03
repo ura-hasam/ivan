@@ -1,9 +1,9 @@
 body {
   overflow-x: hidden;
   background-image: url(../images/background.png);
-  background-size: cover;
-  background-repeat: repeat-y;
-  background-position: center;
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
   font-family: "Zen Old Mincho", "Hiragino Mincho", "Yu mincho";
   color: #221715;
 }
@@ -201,10 +201,11 @@ body {
   padding-bottom: 20px;
   max-width: 140px;
   aspect-ratio: 1/1;
+  color: #ffffff;
 }
 .synopsis .circle-txt .enviroment .circle span {
   padding-top: 40px;
-  color: #ffffff;
+  color: #838383;
 }
 .synopsis .circle-txt .enviroment .explain {
   font-size: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
@@ -226,10 +227,11 @@ body {
   padding-bottom: 20px;
   max-width: 140px;
   aspect-ratio: 1/1;
+  color: #ffffff;
 }
 .synopsis .circle-txt .meal .circle span {
   padding-top: 40px;
-  color: #ffffff;
+  color: #838383;
 }
 .synopsis .circle-txt .meal .explain {
   font-size: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
@@ -377,6 +379,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 10px 25px 0;
+  transition: all 0.3s ease-in-out;
+}
+.purchase .button:hover {
+  box-shadow: none;
 }
 .purchase .button a {
   display: block;
@@ -404,6 +411,7 @@ body {
   grid-template-rows: 1fr 1fr;
   justify-items: center;
   align-items: center;
+  max-width: 706px;
   row-gap: 32px;
   -moz-column-gap: 50px;
        column-gap: 50px;
@@ -411,6 +419,10 @@ body {
 .purchase .paper-container .button:nth-child(1) {
   grid-column: 1/2;
   grid-row: 1/2;
+  box-shadow: 0 10px 25px 0;
+}
+.purchase .paper-container .button:nth-child(1):hover {
+  box-shadow: none;
 }
 .purchase .paper-container .button:nth-child(1) img {
   padding-top: 25px;
@@ -418,6 +430,10 @@ body {
 .purchase .paper-container .button:nth-child(2) {
   grid-column: 2/3;
   grid-row: 1/2;
+  box-shadow: 0 10px 25px 0;
+}
+.purchase .paper-container .button:nth-child(2):hover {
+  box-shadow: none;
 }
 .purchase .paper-container .button:nth-child(2) img {
   padding-top: 25px;
@@ -425,6 +441,10 @@ body {
 .purchase .paper-container .button:nth-child(3) {
   grid-column: 1/2;
   grid-row: 2/3;
+  box-shadow: 0 10px 25px 0;
+}
+.purchase .paper-container .button:nth-child(3):hover {
+  box-shadow: none;
 }
 .purchase .paper-container .button:nth-child(3) img {
   padding-top: 20px;
@@ -432,6 +452,10 @@ body {
 .purchase .paper-container .button:nth-child(4) {
   grid-column: 2/3;
   grid-row: 2/3;
+  box-shadow: 0 10px 25px 0;
+}
+.purchase .paper-container .button:nth-child(4):hover {
+  box-shadow: none;
 }
 .purchase .paper-container .button:nth-child(4) img {
   padding-top: 25px;
@@ -551,7 +575,7 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
     top: -500px;
   }
   ul a {
